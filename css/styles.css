@@ -1155,6 +1155,61 @@ p {
   border-radius: 50%;
 }
 
+/* --- Staff Grid --- */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.staff-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.staff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.staff-avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  border: 3px solid var(--gold);
+}
+
+.staff-avatar svg {
+  width: 36px;
+  height: 36px;
+  opacity: 0.5;
+}
+
+.staff-card h4 {
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+  color: var(--navy);
+}
+
+.staff-role {
+  font-size: 0.85rem;
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 /* --- Footer --- */
 .footer {
   background: var(--navy-dark);
