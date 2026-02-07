@@ -65,15 +65,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Contact Form Handling via Formspree ---
+  // --- Contact Form Handling via FormSubmit ---
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
 
+  // Check if returning from successful submission
+  if (window.location.search.indexOf('sent=true') > -1) {
+    if (contactForm) contactForm.style.display = 'none';
+    if (formSuccess) formSuccess.classList.add('show');
+    setTimeout(function () {
+      if (contactForm) contactForm.style.display = 'block';
+      if (formSuccess) formSuccess.classList.remove('show');
+      // Clean URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }, 5000);
+  }
+
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Basic validation
+      // Basic validation before allowing submit
       var firstName = document.getElementById('firstName').value.trim();
       var lastName = document.getElementById('lastName').value.trim();
       var email = document.getElementById('email').value.trim();
@@ -81,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var message = document.getElementById('message').value.trim();
 
       if (!firstName || !lastName || !email || !subject || !message) {
+        e.preventDefault();
         alert('Please fill in all required fields.');
         return;
       }
@@ -88,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Email validation
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
+        e.preventDefault();
         alert('Please enter a valid email address.');
         return;
       }
@@ -96,36 +108,12 @@ document.addEventListener('DOMContentLoaded', function () {
       var replyTo = document.getElementById('replyTo');
       if (replyTo) replyTo.value = email;
 
-      // Submit to Formspree
+      // Show sending state
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending...';
 
-      var formData = new FormData(contactForm);
-
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
-        if (response.ok) {
-          contactForm.style.display = 'none';
-          formSuccess.classList.add('show');
-          contactForm.reset();
-          setTimeout(function () {
-            contactForm.style.display = 'block';
-            formSuccess.classList.remove('show');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
-          }, 5000);
-        } else {
-          throw new Error('Form submission failed');
-        }
-      }).catch(function () {
-        alert('There was an error sending your message. Please try again or email us directly at info@edanglaw.com.');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
-      });
+      // Allow the form to submit normally to FormSubmit
     });
   }
 
