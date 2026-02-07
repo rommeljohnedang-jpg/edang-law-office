@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // --- Contact Form Handling ---
+  // --- Contact Form Handling via Formspree ---
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
 
@@ -92,16 +92,40 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Show success message (in production, this would send data to a server)
-      contactForm.style.display = 'none';
-      formSuccess.classList.add('show');
+      // Set reply-to email
+      var replyTo = document.getElementById('replyTo');
+      if (replyTo) replyTo.value = email;
 
-      // Reset form after a delay
-      setTimeout(function () {
-        contactForm.reset();
-        contactForm.style.display = 'block';
-        formSuccess.classList.remove('show');
-      }, 5000);
+      // Submit to Formspree
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+
+      var formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('show');
+          contactForm.reset();
+          setTimeout(function () {
+            contactForm.style.display = 'block';
+            formSuccess.classList.remove('show');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      }).catch(function () {
+        alert('There was an error sending your message. Please try again or email us directly at info@edanglaw.com.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>';
+      });
     });
   }
 
