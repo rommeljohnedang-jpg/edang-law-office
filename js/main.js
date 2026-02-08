@@ -145,4 +145,24 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // --- FAQ Accordion ---
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(function (question) {
+    question.addEventListener('click', function () {
+      var isOpen = this.getAttribute('aria-expanded') === 'true';
+      // Close all other answers
+      faqQuestions.forEach(function (q) {
+        q.setAttribute('aria-expanded', 'false');
+        var answer = q.nextElementSibling;
+        if (answer) answer.classList.remove('open');
+      });
+      // Toggle current
+      if (!isOpen) {
+        this.setAttribute('aria-expanded', 'true');
+        var answer = this.nextElementSibling;
+        if (answer) answer.classList.add('open');
+      }
+    });
+  });
+
 });
