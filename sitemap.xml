@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://edanglaw.com/blog.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -93,6 +93,12 @@
   <url>
     <loc>https://edanglaw.com/blog/cyber-libel-philippines-facebook.html</loc>
     <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edanglaw.com/blog/sharing-viral-scandal-video-crime-philippines.html</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
