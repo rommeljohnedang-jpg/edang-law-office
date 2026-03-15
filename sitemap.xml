@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://edanglaw.com/blog.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,6 +105,12 @@
   <url>
     <loc>https://edanglaw.com/blog/perjury-philippines-penalty-filing.html</loc>
     <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edanglaw.com/blog/right-of-way-philippines-can-owner-close-path.html</loc>
+    <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
