@@ -21,14 +21,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- Google tag (gtag.js) - Replace G-XXXXXXXXXX with your actual Google Analytics ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
 <body>
 
@@ -107,7 +99,7 @@
           <h2>Edang Law</h2>
           <div class="section-divider" style="margin: 1rem 0;"></div>
           <p>Edang Law is a solo general practice based in San Miguel, Jordan, Guimaras. The practice was established to provide accessible and dependable legal services to individuals, families, and businesses with legal matters in Guimaras — whether they are based in the province, in Iloilo, or elsewhere in the Philippines.</p>
-          <p>As a solo practitioner, I handle a broad range of legal matters and provide each client with direct, personal attention. I take the time to understand every case thoroughly and work diligently to assist my clients within the bounds of the law.</p>
+          <p>As a solo practitioner, I handle a broad range of legal matters and provide each client with direct, personal attention. I take the time to understand every case thoroughly and work diligently to assist my clients within the bounds of the law. For clients who cannot visit in person, I also offer <a href="contact.html">online consultations via Google Meet</a>.</p>
           <p>I believe that the attorney-client relationship is built on trust, transparency, and open communication. I listen carefully, explain the legal process clearly, and keep my clients informed throughout their case.</p>
         </div>
       </div>
@@ -232,11 +224,11 @@
         <div>
           <h4>Practice Areas</h4>
           <ul class="footer-links">
-            <li><a href="practice-areas.html">Criminal Law</a></li>
-            <li><a href="practice-areas.html">Civil Law</a></li>
-            <li><a href="practice-areas.html">Annulment</a></li>
-            <li><a href="practice-areas.html">Real Estate</a></li>
-            <li><a href="practice-areas.html">Labor Law</a></li>
+            <li><a href="practice-areas.html#criminal-law">Criminal Law</a></li>
+            <li><a href="practice-areas.html#civil-law">Civil Law</a></li>
+            <li><a href="practice-areas.html#annulment">Annulment</a></li>
+            <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+            <li><a href="practice-areas.html#labor-law">Labor Law</a></li>
           </ul>
         </div>
         <div>
@@ -269,6 +261,46 @@
   <script src="js/main.js"></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://edanglaw.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://edanglaw.com/about.html"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Edang Law",
+  "alternateName": "Edang Law Office",
+  "url": "https://edanglaw.com",
+  "description": "Solo general practice law office based in Jordan, Guimaras providing accessible and dependable legal services in criminal law, civil law, annulment, real estate, and labor law.",
+  "foundingDate": "2017",
+  "founder": {
+    "@type": "Person",
+    "name": "Atty. Rommel John Edang"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, JACQ Commercial Building, San Miguel",
+    "addressLocality": "Jordan",
+    "addressRegion": "Guimaras",
+    "addressCountry": "PH"
+  },
+  "telephone": "+639399207932",
+  "email": "info@edanglaw.com",
+  "areaServed": [
+    {
+      "@type": "AdministrativeArea",
+      "name": "Guimaras"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Iloilo"
+    }
+  ],
+  "knowsAbout": ["Criminal Law", "Civil Law", "Annulment", "Real Estate Law", "Labor Law", "Notarial Services", "Philippine Law"],
+  "slogan": "Trusted Legal Counsel",
+  "openingHours": "Mo-Sa 08:00-17:00",
+  "sameAs": [
+    "https://www.facebook.com/EdangLawOffice"
+  ]
+}
 </script>
 </body>
 </html>
