@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://edanglaw.com/blog.html</loc>
-    <lastmod>2026-03-15</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -105,6 +105,18 @@
   <url>
     <loc>https://edanglaw.com/blog/perjury-philippines-penalty-filing.html</loc>
     <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edanglaw.com/blog/adverse-claim-philippines-how-to-cancel.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://edanglaw.com/blog/ra9262-economic-abuse-financial-control-vawc.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
