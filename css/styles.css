@@ -11,6 +11,9 @@
   --gold: #c9a84c;
   --gold-light: #e0c36a;
   --gold-dark: #a8872e;
+  --primary: var(--navy);
+  --primary-dark: var(--navy-dark);
+  --accent: var(--gold-dark);
   --cream: #f8f5f0;
   --white: #ffffff;
   --gray-100: #f7f7f7;
@@ -617,6 +620,66 @@ p {
 .practice-card .card-link:hover {
   color: var(--navy);
   gap: 0.7rem;
+}
+
+/* --- Quick Answer Section --- */
+.answer-section {
+  padding: 4rem 0;
+}
+
+.answer-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.answer-layout h2 {
+  margin-bottom: 1rem;
+}
+
+.answer-layout p {
+  max-width: 720px;
+  color: var(--gray-700);
+  font-size: 1.02rem;
+}
+
+.answer-facts {
+  display: grid;
+  gap: 0;
+  border-top: 2px solid var(--gold);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.answer-facts div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.answer-facts dt {
+  color: var(--navy);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.78rem;
+}
+
+.answer-facts dd {
+  margin: 0;
+  color: var(--gray-700);
+}
+
+.answer-facts a {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.answer-facts a:hover {
+  color: var(--navy);
 }
 
 /* --- Why Choose Us --- */
@@ -1388,6 +1451,59 @@ p {
   color: var(--gold);
 }
 
+/* --- Property services cross-reference note (footer) --- */
+.footer-xref {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+.footer-xref-heading {
+  display: block;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.footer-xref-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-xref-body p {
+  margin: 0;
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-xref-body p a {
+  color: rgba(201, 168, 76, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.footer-xref-body p a:hover {
+  color: var(--gold-light);
+}
+
+.footer-xref-cta {
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.footer-xref-cta:hover {
+  color: var(--gold);
+}
+
 /* --- FAQ Page --- */
 .faq-container {
   max-width: 900px;
@@ -1588,6 +1704,11 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .answer-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1658,6 +1779,11 @@ p {
 
   .practice-detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .answer-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
 }
 
