@@ -1453,25 +1453,25 @@ p {
 
 /* --- Property services cross-reference note (footer) --- */
 .footer-xref {
-  padding: 1rem 0;
+  padding: 1.25rem 0;
   border-top: 1px solid rgba(201, 168, 76, 0.15);
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
 }
 
 .footer-xref-heading {
   display: block;
-  color: rgba(255, 255, 255, 0.65);
-  font-weight: 500;
-  margin-bottom: 0.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
 }
 
 .footer-xref-body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -1482,7 +1482,7 @@ p {
 }
 
 .footer-xref-body p a {
-  color: rgba(201, 168, 76, 0.85);
+  color: rgba(201, 168, 76, 0.9);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color var(--transition);
@@ -1493,9 +1493,9 @@ p {
 }
 
 .footer-xref-cta {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
   white-space: nowrap;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   flex-shrink: 0;
   transition: color var(--transition);
 }
