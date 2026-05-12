@@ -803,6 +803,23 @@ p {
   fill: var(--gold);
 }
 
+.testimonials-disclaimer {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--gray-600);
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.testimonials-disclaimer a {
+  color: var(--gray-600);
+  text-decoration: underline;
+}
+
+.testimonials-disclaimer a:hover {
+  color: var(--navy);
+}
+
 /* --- Google Review CTA --- */
 .review-cta-content {
   display: grid;
@@ -1457,7 +1474,7 @@ p {
   border-top: 1px solid rgba(201, 168, 76, 0.2);
   padding: 0.5rem 0;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.5;
 }
 
