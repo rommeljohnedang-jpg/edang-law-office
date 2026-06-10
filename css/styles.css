@@ -2094,3 +2094,39 @@ p {
     font-size: 1rem;
   }
 }
+
+/* Cross-reference block: Guimaras Land & Property Services (sister brand) */
+.footer-crosslink {
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-crosslink h4 {
+  margin: 0 0 0.35rem;
+  color: #fff;
+}
+
+.footer-crosslink p {
+  margin: 0;
+  font-size: 0.9rem;
+  max-width: 62ch;
+}
+
+.footer-crosslink a {
+  color: var(--gold);
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.footer-crosslink a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
