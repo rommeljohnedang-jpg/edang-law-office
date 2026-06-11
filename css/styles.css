@@ -1661,15 +1661,23 @@ p {
   }
 }
 
-.fade-in {
+html.js .fade-in {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-in.visible {
+html.js .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* --- Form Messages --- */
@@ -2095,3 +2103,108 @@ p {
   }
 }
 
+
+/* --- Header CTA contrast fix: navy text on gold, like every other primary button --- */
+.nav-links a.btn-primary {
+  color: var(--navy-dark);
+}
+
+.nav-links a.btn-primary:hover {
+  color: var(--navy-dark);
+}
+
+/* --- Hero refinements --- */
+.hero-greeting {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: var(--gold-light);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .hero-desc-extra {
+    display: none;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+/* --- Quick Answer section: lighter visual weight --- */
+.answer-section {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.answer-section h2 {
+  font-size: 1.6rem;
+}
+
+/* --- Inline Google review ask (replaces the old full-width section) --- */
+.review-inline {
+  text-align: center;
+  margin: 2.5rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.review-inline a {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.review-inline a:hover {
+  text-decoration: underline;
+}
+
+/* --- Sticky call/message bar (mobile only) --- */
+.sticky-contact-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-contact-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--navy-dark);
+    border-top: 1px solid rgba(201, 168, 76, 0.35);
+    padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+    gap: 0.6rem;
+  }
+
+  .sticky-contact-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .sticky-contact-bar .sticky-call {
+    background: var(--gold);
+    color: var(--navy-dark);
+  }
+
+  .sticky-contact-bar .sticky-message {
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+  }
+
+  body {
+    padding-bottom: 64px;
+  }
+}
