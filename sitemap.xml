@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://edanglaw.com/blog.html</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -185,5 +185,11 @@
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://edanglaw.com/blog/bank-credited-check-early-supreme-court-bdo-barcellano.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
